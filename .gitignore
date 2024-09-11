@@ -1,0 +1,90 @@
+# Dependências
+node_modules/
+bower_components/
+
+# Plataformas e plugins do Capacitor/Cordova
+platforms/
+plugins/
+www/
+
+# Arquivos de configuração IDE/Editor
+*.code-workspace
+.vscode/
+*.sublime-workspace
+*.sublime-project
+.idea/
+*.swp
+*.swo
+*.swn
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Diretórios de output de compilação
+/dist
+/tmp
+/out-tsc
+
+# Arquivos específicos do Angular
+angular.json
+*.ngsummary.json
+*.ngfactory.js
+*.ngstyle.js
+
+# Arquivos de build
+/coverage
+/build/
+/coverage/
+/out/
+**/.nyc_output
+
+# Arquivos de chave
+*.keystore
+*.jks
+*.p12
+*.key
+*.cert
+*.pem
+
+# Arquivos de ambiente
+*.env
+*.env.local
+*.env.development.local
+*.env.test.local
+*.env.production.local
+
+# Arquivos e pastas de cache
+.cache/
+.parcel-cache/
+.pnpm-store/
+.rush/
+
+# Arquivos de build específicos do Ionic
+ionic.config.json
+
+# Arquivos de log específicos do Ionic
+ionic.starter.json
+
+# Ficheiros de compilação específicos para Electron
+/electron-packager
+/electron-builder-out
+/dist/
+/release/
+
+# Arquivos específicos para PWA
+ngsw-worker.js
+ngsw.json
+safety-worker.js
+worker-basic.min.js
+
+# Pacotes locais
+.pnpm-debug.log
