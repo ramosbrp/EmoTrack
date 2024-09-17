@@ -8,4 +8,4 @@ dist/
 build/
 
 .vs
-.vs code
+.vscode
