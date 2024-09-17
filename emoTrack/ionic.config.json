@@ -1,0 +1,7 @@
+{
+  "name": "emoTrack",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
