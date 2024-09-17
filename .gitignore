@@ -6,3 +6,6 @@ bower_components/
 www/
 dist/
 build/
+
+.vs
+.vs code
