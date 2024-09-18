@@ -9,4 +9,11 @@ export class Tab1Page {
 
   constructor() {}
 
+
+  userMood: number = 5; // Valor inicial do humor
+  
+  onMoodChange(event: any) {
+    console.log('Mood changed to: ', event.detail.value);
+  }
+
 }
