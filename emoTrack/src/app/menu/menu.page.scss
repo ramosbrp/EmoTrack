@@ -1,0 +1,31 @@
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #d3d3d3;
+  padding: 20px;
+  height: 100vh;
+  justify-content: center;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  background-color: #f0f0f0;
+  color: #333;
+  border: none;
+  padding: 15px;
+  margin-bottom: 15px;
+  font-size: 18px;
+  text-align: left;
+  border-radius: 32px;
+  cursor: pointer;
+}
+
+ion-icon {
+  margin-right: 10px;
+  /* Espaço entre ícone e texto */
+}
+
+.menu-item:hover {
+  background-color: #e0e0e0;
+}
