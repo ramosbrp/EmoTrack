@@ -1,0 +1,73 @@
+.thermometer {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  position: relative;
+}
+
+.vertical-range {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 200px;
+  height: 20px;
+  background: linear-gradient(to right, #ff0000, #ffff00, #00ff00);
+  transform: rotate(-90deg);
+  /* Faz o controle ser interativo na vertical */
+  margin: 0;
+  padding: 0;
+  border-radius: 10px;
+}
+
+.vertical-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.vertical-range::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.thermometer-label {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.ion-list {
+  height: 60vh;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.ion-item {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+
+}
+
+.ion-item textarea {
+  width: 50vw;
+  height: 60px;
+}
+
+.label {
+  width: 40vw;
+  font-size: 16px;
+  padding-bottom: 10px;
+}

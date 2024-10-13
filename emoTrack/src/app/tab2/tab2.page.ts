@@ -7,6 +7,16 @@ import { Component } from '@angular/core';
 })
 export class Tab2Page {
 
-  constructor() {}
+  constructor() { }
+
+
+  ngOnInit() {
+  }
+
+   getImageUrl(imageName: string): string {
+    console.log(`${window.location.origin}/assets/images/${imageName}`)
+    return `${window.location.origin}/src/app/assets/images/${imageName}`;
+  }
+
 
 }
