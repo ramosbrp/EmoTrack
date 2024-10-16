@@ -12,8 +12,8 @@ const routes: Routes = [
         loadChildren: () => import('../home/home.module').then(m => m.HomePageModule)
       },
       {
-        path: 'tab2',
-        loadChildren: () => import('../tab2/tab2.module').then(m => m.Tab2PageModule)
+        path: 'mais',
+        loadChildren: () => import('../mais/mais.module').then(m => m.MaisPageModule)
       },
       {
         path: 'menu',
@@ -27,6 +27,10 @@ const routes: Routes = [
     ]
   },
   {
+    path: 'notificacoes', // Rota de notificações fora das Tabs
+    loadChildren: () => import('../notificacoes/notificacoes.module').then(m => m.NotificacoesPageModule)
+  },
+  {
     path: '',
     redirectTo: '/tabs/home',
     pathMatch: 'full'
@@ -35,5 +39,6 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule]
 })
 export class TabsPageRoutingModule {}

@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar >
+    <ion-buttons slot="end">
+      <ion-button (click)="goBack()">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title style="text-align: center; color: #333;">Notificações</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <ion-list >
+    <ion-item *ngFor="let notification of notifications" class="notification-item">
+      <div class="notification-content">
+        <p class="notification-text">{{ notification.text }}</p>
+        <p class="notification-date">{{ notification.date }}</p>
+      </div>
+    </ion-item>
+  </ion-list>
+</ion-content>

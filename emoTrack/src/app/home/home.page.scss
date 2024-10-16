@@ -1,3 +1,8 @@
+*{
+  --background: #f8f8f8;
+  color: #333;
+}
+
 .thermometer {
   margin-top: 60px;
   display: flex;
@@ -51,7 +56,7 @@
   flex-flow: column;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: px;
 }
 
 .ion-item {
@@ -64,6 +69,7 @@
 .ion-item textarea {
   width: 50vw;
   height: 60px;
+  background-color: #f8f8f8;
 }
 
 .label {
