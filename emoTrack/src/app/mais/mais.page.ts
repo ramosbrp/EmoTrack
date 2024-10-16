@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { NavController } from '@ionic/angular';
+
 
 @Component({
   selector: 'app-tab-mais',
@@ -7,10 +9,26 @@ import { Component } from '@angular/core';
 })
 export class MaisPage {
 
-  constructor() { }
+  constructor(private navCtrl: NavController) { }
 
 
   ngOnInit() {
+  }
+
+  navigateToDicas() {
+    this.navCtrl.navigateForward('/dicas');
+  }
+
+  navigateToHistorico() {
+    this.navCtrl.navigateForward('/historico');
+  }
+
+  navigateToPerfil() {
+    this.navCtrl.navigateForward('/teste-perfil-comportamental');
+  }
+
+  navigateToDiario() {
+    this.navCtrl.navigateForward('/diario');
   }
 
   getImageUrl(imageName: string): string {

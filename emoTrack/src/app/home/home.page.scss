@@ -6,7 +6,7 @@
 .thermometer {
   margin-top: 60px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   height: 200px;
@@ -50,6 +50,9 @@
   font-weight: bold;
 }
 
+ion-label{
+  font-size: 20px !important;
+}
 .ion-list {
   height: 60vh;
   display: flex;

@@ -14,4 +14,7 @@ export class MenuPage {
     this.navCtrl.navigateForward('/notificacoes');
   }
 
+  navigateToAssinatura() {
+    this.navCtrl.navigateForward('/assinatura-premium');
+  }
 }
