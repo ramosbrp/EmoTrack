@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../services/auth-service.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -11,7 +12,7 @@ export class LoginPage {
   email: string = '';
   password: string = '';
 
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService, private router: Router) { }
 
   login() {
     this.authService.login(this.email, this.password)
@@ -21,5 +22,8 @@ export class LoginPage {
     this.authService.loginWithGoogle();
   }
 
+  goBack() {
+    this.router.navigate(['landing']);
+  }
 
 }

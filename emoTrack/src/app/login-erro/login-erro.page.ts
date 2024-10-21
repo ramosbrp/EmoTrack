@@ -14,7 +14,11 @@ export class LoginErroPage implements OnInit {
   ngOnInit() {
   }
 
-  tryAgain(){
-  this.router.navigate(['login'])
+  tryAgain() {
+    this.router.navigate(['login'])
+  }
+
+  goBack() {
+    this.router.navigate(['login']);
   }
 }

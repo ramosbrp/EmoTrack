@@ -52,6 +52,14 @@ const routes: Routes = [
   {
     path: 'login-erro',
     loadChildren: () => import('./login-erro/login-erro.module').then( m => m.LoginErroPageModule)
+  },
+  {
+    path: 'pre-cadastro',
+    loadChildren: () => import('./pre-cadastro/pre-cadastro.module').then( m => m.PreCadastroPageModule)
+  },
+  {
+    path: 'cadastro',
+    loadChildren: () => import('./cadastro/cadastro.module').then( m => m.CadastroPageModule)
   }
 
 

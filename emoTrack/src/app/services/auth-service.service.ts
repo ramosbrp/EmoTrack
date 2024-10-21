@@ -7,19 +7,22 @@ import { Auth, signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider }
   providedIn: 'root'
 })
 export class AuthService {
-
   constructor(private auth: AngularFireAuth, private router: Router) { }
+
+  async register(email: string, password: string){
+    await this.auth.createUserWithEmailAndPassword(email, password);
+  }
 
   async login(email: string, password: string) {
     try {
       await this.auth.signInWithEmailAndPassword(email, password)
       this.router.navigate(['home']);
-    }catch(error){
+    } catch (error) {
       this.router.navigate(['login-erro']);
     }
   }
 
-  logout(){
+  logout() {
     this.auth.signOut();
   }
 

@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="goBack()">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title>Escolha como deseja continuar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="pre-cadastro-container">
+    <h2>Bem-vindo ao Emotrack!</h2>
+    <p>Escolha uma das opções abaixo para continuar</p>
+
+    <ion-button expand="full" color="primary" (click)="navigateToEmailSignup()">Cadastrar com Email</ion-button>
+
+    <ion-button expand="full" color="light" (click)="loginWithGoogle()">
+      <ion-icon name="logo-google" slot="start"></ion-icon>
+      Continuar com Google
+    </ion-button>
+  </div>
+</ion-content>

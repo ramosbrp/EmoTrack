@@ -18,7 +18,7 @@ export class LandingPage implements OnInit {
   }
 
   navigateToRegister(){
-    this.router.navigate(['cadastro'])
+    this.router.navigate(['pre-cadastro'])
 
   }
 }
