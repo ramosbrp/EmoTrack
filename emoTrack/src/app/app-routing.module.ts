@@ -22,10 +22,6 @@ const routes: Routes = [
     path: 'teste-perfil-comportamental',
     loadChildren: () => import('./teste-perfil-comportamental/teste-perfil-comportamental.module').then(m => m.TestePerfilComportamentalPageModule)
   },
-  //  {
-  //   path: 'diario',
-  //   loadChildren: () => import('./diario/diario.module').then(m => m.DiarioPageModule)
-  // },
   {
     path: 'historico',
     loadChildren: () => import('./historico/historico.module').then( m => m.HistoricoPageModule)
@@ -37,7 +33,8 @@ const routes: Routes = [
   {
     path: 'diarrio',
     loadChildren: () => import('./diarrio/diarrio.module').then( m => m.DiarrioPageModule)
-  },  {
+  },
+  {
     path: 'assinatura-premium',
     loadChildren: () => import('./assinatura-premium/assinatura-premium.module').then( m => m.AssinaturaPremiumPageModule)
   },

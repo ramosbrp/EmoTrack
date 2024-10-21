@@ -14,18 +14,6 @@ export class LoginPage {
   constructor(private authService: AuthService) { }
 
   login() {
-    this.authService.login(this.email, this.password).then(() => {
-      // Navegar para a home
-    }).catch(error => {
-      console.log(error);
-    });
-  }
-
-  register() {
-    this.authService.register(this.email, this.password).then(() => {
-      // Registro com sucesso
-    }).catch(error => {
-      console.log(error);
-    });
+    this.authService.login(this.email, this.password)
   }
 }

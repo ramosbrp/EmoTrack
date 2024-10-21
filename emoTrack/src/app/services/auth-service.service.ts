@@ -1,31 +1,24 @@
 import { Injectable } from '@angular/core';
-import { Auth, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut, onAuthStateChanged } from '@angular/fire/auth';
-import { Observable } from 'rxjs';
+import { AngularFireAuth } from '@angular/fire/compat/auth';  //aqui
+import { Router } from '@angular/router';  //aqui
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  constructor(private auth: Auth) { }
+  constructor(private auth: AngularFireAuth, private router: Router) { }
 
   async login(email: string, password: string) {
-    return signInWithEmailAndPassword(this.auth, email, password);
+    try {
+      await this.auth.signInWithEmailAndPassword(email, password)
+      this.router.navigate(['notificacoes']);
+    }catch(error){
+      this.router.navigate(['']);
+    }
   }
 
-  async register(email: string, password: string) {
-    return createUserWithEmailAndPassword(this.auth, email, password);
-  }
-
-  async logout() {
-    return signOut(this.auth);
-  }
-
-  getUser(): Observable<any> {
-    return new Observable((observer) => {
-      onAuthStateChanged(this.auth, (user) => {
-        observer.next(user);
-      });
-    });
+  logout(){
+    this.auth.signOut();
   }
 }
