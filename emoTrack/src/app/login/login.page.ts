@@ -16,4 +16,10 @@ export class LoginPage {
   login() {
     this.authService.login(this.email, this.password)
   }
+
+  async loginWithGoogle() {
+    this.authService.loginWithGoogle();
+  }
+
+
 }

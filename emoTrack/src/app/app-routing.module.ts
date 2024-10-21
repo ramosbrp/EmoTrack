@@ -7,6 +7,10 @@ const routes: Routes = [
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
   },
   {
+    path: 'home',
+    loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
+  },
+  {
     path: 'notificacoes',
     loadChildren: () => import('./notificacoes/notificacoes.module').then(m => m.NotificacoesPageModule)
   },
@@ -41,7 +45,15 @@ const routes: Routes = [
   {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },  {
+    path: 'landing',
+    loadChildren: () => import('./landing/landing.module').then( m => m.LandingPageModule)
+  },
+  {
+    path: 'login-erro',
+    loadChildren: () => import('./login-erro/login-erro.module').then( m => m.LoginErroPageModule)
   }
+
 
 
 
