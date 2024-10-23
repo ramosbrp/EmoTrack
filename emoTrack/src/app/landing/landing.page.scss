@@ -5,16 +5,52 @@
 
 .hero-section img {
   width: 100%;
-  max-height: 300px;
+  max-height: 200px;
+  border-radius: 50%;
+  padding: 5px;
+  width: 150px;
+  height: 150px;
   object-fit: cover;
+  border-radius: 50%;
+  padding: 5px;
+  background: linear-gradient(135deg, #42b96c, #a33791);
 }
 
 .features-section {
-  margin-top: 30px;
+  margin-top: 20px;
   padding: 20px;
 }
 
 ion-card {
   text-align: center;
   padding: 10px;
+}
+
+.btn-container {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  width: 300px;
+  background-color: #f0f0f0;
+  color: #333;
+  border: 1px solid black;
+  padding: 12px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  border-radius: 32px;
+  cursor: pointer;
+}
+
+.entrar {
+  background-color: #42b96c;
+  font-weight: 600;
+
+}
+
+.cadastrar:hover {
+  background-color: #76a791;
 }

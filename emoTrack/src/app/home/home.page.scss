@@ -1,10 +1,10 @@
-*{
+* {
   --background: #f8f8f8;
   color: #333;
 }
 
 .thermometer {
-  margin-top: 60px;
+  margin-top: 20px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -50,16 +50,18 @@
   font-weight: bold;
 }
 
-ion-label{
+ion-label {
   font-size: 20px !important;
 }
+
 .ion-list {
   height: 60vh;
   display: flex;
   flex-flow: column;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: px;
+  height: 50vh;
+  margin-bottom: 20px;
 }
 
 .ion-item {
@@ -79,4 +81,16 @@ ion-label{
   width: 40vw;
   font-size: 16px;
   padding-bottom: 10px;
+}
+
+.btn-enviar {
+  width: 100%;
+  background-color: #0b9b2a;
+  color: white;
+  border: 1px solid black;
+  padding: 12px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  border-radius: 32px;
+  cursor: pointer;
 }

@@ -1,16 +1,21 @@
 <ion-content>
   <div class="option-container">
-    <div class="option-item" [style.background-image]="'url(' + getImageUrl('blur1.jpg') + ')'">
-      <button ion-button (click)="navigateToDicas()">Dicas</button>
+    <div>
+      <div class="option-item dicas" [style.background-image]="'url(' + getImageUrl('blur1.jpg') + ')'">
+        <a ion-button (click)="navigateToDicas()">Dicas</a>
+      </div>
+      <div class="option-item historico" [style.background-image]="'url(' + getImageUrl('blur2.jpg') + ')'">
+        <a ion-button (click)="navigateToHistorico()">Histórico</a>
+      </div>
     </div>
-    <div class="option-item" [style.background-image]="'url(' + getImageUrl('blur2.jpg') + ')'">
-      <button ion-button (click)="navigateToHistorico()">Histórico</button>
-    </div>
-    <div class="option-item" [style.background-image]="'url(' + getImageUrl('blur3.jpg') + ')'">
-      <button ion-button (click)="navigateToPerfil()">Teste Perfil Comportamental</button>
-    </div>
-    <div class="option-item" [style.background-image]="'url(' + getImageUrl('blur4.jpg') + ')'">
-      <button ion-button (click)="navigateToDiario()">Diário</button>
+
+    <div>
+      <div class="option-item diario" [style.background-image]="'url(' + getImageUrl('blur4.jpg') + ')'">
+        <a ion-button (click)="navigateToDiario()">Diário</a>
+      </div>
+      <div class="option-item teste" [style.background-image]="'url(' + getImageUrl('blur3.jpg') + ')'">
+        <a ion-button (click)="navigateToPerfil()">Teste Perfil Comportamental</a>
+      </div>
     </div>
   </div>
 </ion-content>

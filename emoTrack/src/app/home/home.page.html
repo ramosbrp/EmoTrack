@@ -13,7 +13,7 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-item>
+  <ion-item style="height: 40vh;">
     <ion-label position="stacked">Dê uma nota para o seu humor</ion-label>
     <div class="thermometer">
       <input type="range" min="1" max="10" step="1" class="vertical-range" [(ngModel)]="userMood"
@@ -37,5 +37,5 @@
     </ion-item>
   </ion-list>
 
-  <ion-button color="primary" (click)="enviarDados()">Enviar</ion-button>
+  <button class="btn-enviar" color="" (click)="enviarDados()">Enviar</button>
 </ion-content>

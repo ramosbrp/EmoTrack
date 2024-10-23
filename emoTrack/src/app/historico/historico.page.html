@@ -10,23 +10,18 @@
 </ion-header>
 
 <ion-content style="background-color: #eaeaea;">
-  <ion-list>
-    <ion-item class="historico-item">
+  <ion-list *ngIf="historico.length > 0; else noData">
+    <ion-item *ngFor="let item of historico" class="historico-item" class="historico-item">
       <div class="historico-content">
-        <p class="historico-date">12/10/2024 - Nota: 8</p>
-        <p class="historico-text">Grato por: Família, Trabalho, Saúde</p>
-        <p class="historico-text">Intenções: Ser mais produtivo, paciente e saudável</p>
-        <p class="historico-text">Tarefas: Finalizar projeto, Caminhada, Ligar para mãe</p>
-      </div>
-    </ion-item>
-
-    <ion-item class="historico-item">
-      <div class="historico-content">
-        <p class="historico-date">11/10/2024 - Nota: 7</p>
-        <p class="historico-text">Grato por: Amigos, Comida, Tempo livre</p>
-        <p class="historico-text">Intenções: Relaxar, Ler um livro, Evitar estresse</p>
-        <p class="historico-text">Tarefas: Ler, Meditar, Preparar refeições</p>
+        <p class="historico-date">{{ item.timestamp.toDate().toLocaleDateString('pt-BR') }} - Nota: {{ item.mood }}</p>
+        <p class="historico-text">Grato por: {{ item.gratitude }}</p>
+        <p class="historico-text">Intenções: {{ item.intentions }}</p>
+        <p class="historico-text">Tarefas: {{ item.importantTasks }}</p>
       </div>
     </ion-item>
   </ion-list>
+
+  <ng-template #noData>
+    <p>Nenhum dado encontrado.</p>
+  </ng-template>
 </ion-content>

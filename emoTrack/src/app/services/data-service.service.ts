@@ -9,8 +9,13 @@ export class DataService {
 
   constructor(private firestore: Firestore) { }
 
-  addUserMood(moodData: any) {
+  async addUserMood(moodData: any) {
     const moodCollection = collection(this.firestore, 'anotacoes');
-    return addDoc(moodCollection, moodData);
+    return await addDoc(moodCollection, moodData);
+  }
+
+  async getHistorico(): Promise<Observable<any[]>> {
+    const historicoCollection = collection(this.firestore, 'anotacoes');
+    return await collectionData(historicoCollection, { idField: 'id' });
   }
 }

@@ -6,10 +6,15 @@
 
 <ion-content>
   <div class="hero-section">
-    <img src="../../assets/imagens/logo.jpg" alt="Imagem de destaque do app">
-    <h2>Gerencie suas emoções de maneira simples e eficiente.</h2>
-    <ion-button expand="full" color="primary" (click)="navigateToLogin()">Entrar</ion-button>
-    <ion-button expand="full" color="secondary" (click)="navigateToRegister()">Cadastrar</ion-button>
+    <div class="round-frame" >
+      <img src="../../assets/imagens/logo.jpg" alt="Imagem de destaque do app">
+    </div>
+    <h3>Gerencie suas emoções de maneira simples e eficiente.</h3>
+    <div class="btn-container">
+      <button class="btn entrar" fill="outline" expand="full" color="Medium" (click)="navigateToLogin()">Entrar</button>
+      <button class="btn cadastrar" fill="outline" expand="full" color="Medium"
+        (click)="navigateToRegister()">Cadastrar</button>
+    </div>
   </div>
 
   <div class="features-section">
@@ -18,13 +23,13 @@
         <ion-col size="6">
           <ion-card>
             <ion-icon name="happy-outline"></ion-icon>
-            <h3>Monitore seu humor</h3>
+            <h2>Monitore seu humor</h2>
           </ion-card>
         </ion-col>
         <ion-col size="6">
           <ion-card>
             <ion-icon name="journal-outline"></ion-icon>
-            <h3>Registre seu diário</h3>
+            <h2>Registre seu diário</h2>
           </ion-card>
         </ion-col>
       </ion-row>
@@ -32,7 +37,3 @@
     </ion-grid>
   </div>
 </ion-content>
-
-<ion-footer>
-  <p>&copy; 2024 Emotrack | <a href="#">Termos de uso</a> | <a href="#">Política de privacidade</a></p>
-</ion-footer>

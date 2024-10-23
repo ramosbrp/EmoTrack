@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
+import { DataService } from '../services/data-service.service';
 
 @Component({
   selector: 'app-historico',
@@ -8,9 +9,17 @@ import { NavController } from '@ionic/angular';
 })
 export class HistoricoPage implements OnInit {
 
-  constructor(private navCtrl: NavController) { }
+  historico: any[] = [];
+  constructor(
+    private navCtrl: NavController,
+    private dataService: DataService
+  ) { }
 
-  ngOnInit() {
+  async ngOnInit() {
+    (await this.dataService.getHistorico()).subscribe(data => {
+      this.historico = data;
+      console.log(data)
+    });
   }
 
   goBack() {
