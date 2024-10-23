@@ -69,5 +69,5 @@ testem.log
 .DS_Store
 Thumbs.db
 
- repo-backup.git/
- environments/
+ /backup
+ /environments
