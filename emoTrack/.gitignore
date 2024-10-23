@@ -72,3 +72,8 @@ Thumbs.db
  /backup
 /src/environments/
 
+
+# Firebase
+.firebase
+*-debug.log
+.runtimeconfig.json

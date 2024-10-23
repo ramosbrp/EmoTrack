@@ -1,21 +1,22 @@
 import { Injectable } from '@angular/core';
-import { AngularFireAuth } from '@angular/fire/compat/auth';  //aqui
-import { Router } from '@angular/router';  //aqui
-import { Auth, signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from '@angular/fire/auth';
+import { Router } from '@angular/router'; 
+import { Auth, signInWithEmailAndPassword, signInWithPopup, createUserWithEmailAndPassword, GoogleAuthProvider } from '@angular/fire/auth';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  constructor(private auth: AngularFireAuth, private router: Router) { }
+  constructor(
+    private auth: Auth, 
+    private router: Router) { }
 
   async register(email: string, password: string){
-    await this.auth.createUserWithEmailAndPassword(email, password);
+    await createUserWithEmailAndPassword(this.auth, email, password);
   }
 
   async login(email: string, password: string) {
     try {
-      await this.auth.signInWithEmailAndPassword(email, password)
+      await signInWithEmailAndPassword(this.auth, email, password)
       this.router.navigate(['home']);
     } catch (error) {
       this.router.navigate(['login-erro']);
@@ -29,6 +30,6 @@ export class AuthService {
   // Login com Google
   async loginWithGoogle() {
     const provider = new GoogleAuthProvider();
-    return this.auth.signInWithPopup(provider);
+    return signInWithPopup(this.auth, provider);
   }
 }
