@@ -25,15 +25,15 @@
   <ion-list class="ion-list">
     <ion-item class="ion-item">
       <label class="label" for="gratidao" style="color: #333;">Três coisas pelas quais você é grato hoje</label>
-      <textarea class="textarea" id="gratidao" placeholder="Escreva aqui..."></textarea>
+      <textarea [(ngModel)] = "gratitude" class="textarea" id="gratidao" placeholder="Escreva aqui..."></textarea>
     </ion-item>
     <ion-item class="ion-item">
       <label class="label" for="gratidao" style="color: #333;">Intenções para o seu dia</label>
-      <textarea class="textarea" id="gratidao" placeholder="Escreva aqui..."></textarea>
+      <textarea [(ngModel)]="intentions" class="textarea" id="gratidao" placeholder="Escreva aqui..."></textarea>
     </ion-item>
     <ion-item class="ion-item">
       <label class="label" for="gratidao" style="color: #333;">Tarefas mais importantes do dia</label>
-      <textarea class="textarea" id="gratidao" placeholder="Escreva aqui..."></textarea>
+      <textarea [(ngModel)]="importantTasks"  class="textarea" id="gratidao" placeholder="Escreva aqui..."></textarea>
     </ion-item>
   </ion-list>
 
