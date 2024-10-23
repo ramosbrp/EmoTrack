@@ -70,4 +70,5 @@ testem.log
 Thumbs.db
 
  /backup
- /environments
+/src/environments/
+
