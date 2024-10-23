@@ -4,11 +4,11 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
+    loadChildren: () => import('./landing/landing.module').then(m => m.LandingPageModule)
   },
   {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
+    path: 'tabs',
+    loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
   },
   {
     path: 'notificacoes',
@@ -28,38 +28,39 @@ const routes: Routes = [
   },
   {
     path: 'historico',
-    loadChildren: () => import('./historico/historico.module').then( m => m.HistoricoPageModule)
+    loadChildren: () => import('./historico/historico.module').then(m => m.HistoricoPageModule)
   },
   {
     path: 'teste-perfil-comportamental',
-    loadChildren: () => import('./teste-perfil-comportamental/teste-perfil-comportamental.module').then( m => m.TestePerfilComportamentalPageModule)
+    loadChildren: () => import('./teste-perfil-comportamental/teste-perfil-comportamental.module').then(m => m.TestePerfilComportamentalPageModule)
   },
   {
     path: 'diarrio',
-    loadChildren: () => import('./diarrio/diarrio.module').then( m => m.DiarrioPageModule)
+    loadChildren: () => import('./diarrio/diarrio.module').then(m => m.DiarrioPageModule)
   },
   {
     path: 'assinatura-premium',
-    loadChildren: () => import('./assinatura-premium/assinatura-premium.module').then( m => m.AssinaturaPremiumPageModule)
+    loadChildren: () => import('./assinatura-premium/assinatura-premium.module').then(m => m.AssinaturaPremiumPageModule)
   },
   {
     path: 'login',
-    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
-  },  {
+    loadChildren: () => import('./login/login.module').then(m => m.LoginPageModule)
+  },
+  {
     path: 'landing',
-    loadChildren: () => import('./landing/landing.module').then( m => m.LandingPageModule)
+    loadChildren: () => import('./landing/landing.module').then(m => m.LandingPageModule)
   },
   {
     path: 'login-erro',
-    loadChildren: () => import('./login-erro/login-erro.module').then( m => m.LoginErroPageModule)
+    loadChildren: () => import('./login-erro/login-erro.module').then(m => m.LoginErroPageModule)
   },
   {
     path: 'pre-cadastro',
-    loadChildren: () => import('./pre-cadastro/pre-cadastro.module').then( m => m.PreCadastroPageModule)
+    loadChildren: () => import('./pre-cadastro/pre-cadastro.module').then(m => m.PreCadastroPageModule)
   },
   {
     path: 'cadastro',
-    loadChildren: () => import('./cadastro/cadastro.module').then( m => m.CadastroPageModule)
+    loadChildren: () => import('./cadastro/cadastro.module').then(m => m.CadastroPageModule)
   }
 
 

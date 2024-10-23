@@ -8,16 +8,16 @@ import { Router } from '@angular/router';  //aqui
 })
 export class LandingPage implements OnInit {
 
-  constructor( private router: Router) { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
-  navigateToLogin(){
+  navigateToLogin() {
     this.router.navigate(['login'])
   }
 
-  navigateToRegister(){
+  navigateToRegister() {
     this.router.navigate(['pre-cadastro'])
 
   }

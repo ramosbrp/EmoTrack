@@ -3,8 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { TabsPage } from './tabs.page';
 
 const routes: Routes = [
-  {
-    path: 'tabs',
+   {
+    path: '',
     component: TabsPage,
     children: [
       {
@@ -21,19 +21,10 @@ const routes: Routes = [
       },
       {
         path: '',
-        redirectTo: '/tabs/home',
+        redirectTo: 'home',
         pathMatch: 'full'
       }
     ]
-  },
-  {
-    path: 'notificacoes', // Rota de notificações fora das Tabs
-    loadChildren: () => import('../notificacoes/notificacoes.module').then(m => m.NotificacoesPageModule)
-  },
-  {
-    path: '',
-    redirectTo: '/tabs/home',
-    pathMatch: 'full'
   }
 ];
 
@@ -41,4 +32,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class TabsPageRoutingModule {}
+export class TabsPageRoutingModule { }
