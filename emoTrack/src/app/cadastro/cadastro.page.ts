@@ -24,9 +24,9 @@ export class CadastroPage implements OnInit {
       return;
     }
 
-    this.auth.register(this.email, this.password).then(() => {
+    this.auth.register(this.email, this.password, this.fullName).then(() => {
       alert("Usuário cadastrado com sucesso.");
-      this.router.navigate(['home']);
+      this.router.navigate(['tabs']);
     }).catch(error => {
       console.log(error);
     });
